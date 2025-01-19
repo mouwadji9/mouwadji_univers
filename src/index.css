@@ -1,0 +1,91 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  height: 100vh;
+}
+
+.nav-link {
+  color: #495057;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #0d6efd;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+}
+
+.content-section {
+  padding: 40px 0;
+  height: calc(100vh - 56px); /* Subtract navbar height */
+  overflow-y: auto;
+}
+
+.quote-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.photo-card {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+}
+
+.idol-card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.idol-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Scrollable sections */
+.scrollable-section {
+  height: calc(100vh - 250px); /* Adjust based on header height */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.scrollable-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.scrollable-section::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.scrollable-section::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Sticky details panel */
+.details-panel {
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
