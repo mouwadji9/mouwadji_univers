@@ -3,64 +3,66 @@ const studies = [
     icon: <Brain size={40} />,
     title: "Psychologie Cognitive",
     content:
-      "Étude des processus mentaux et de la façon dont nous traitons l'information.",
+      "Étude des processus mentaux et de la façon dont nous traitons l'information",
     details: [
-      {
-        sectionTitle: "Principaux Domaines",
-        sectionContent: [
-          "Mémoire et apprentissage",
-          "Attention et perception",
-          "Résolution de problèmes",
-        ],
-      },
-      {
-        sectionTitle: "Applications",
-        sectionContent: [
-          "Conception de systèmes d'intelligence artificielle",
-          "Éducation et pédagogie cognitive",
-        ],
-      },
+      "Mémoire et apprentissage",
+      "Attention et perception",
+      "Résolution de problèmes",
+      "Processus de pensée",
+      "Développement cognitif",
+      "Intelligence artificielle et cognition",
     ],
   },
   {
     icon: <Heart size={40} />,
     title: "Psychologie Émotionnelle",
-    content: "Analyse des émotions et leur impact sur le comportement.",
+    content: "Analyse des émotions et leur impact sur le comportement",
     details: [
-      {
-        sectionTitle: "Intelligence Émotionnelle",
-        sectionContent: [
-          "Compréhension des émotions",
-          "Gestion des émotions",
-          "Empathie et relations sociales",
-        ],
-      },
-      {
-        sectionTitle: "Thérapie et Gestion du Stress",
-        sectionContent: [
-          "Thérapie cognitive basée sur les émotions",
-          "Techniques de relaxation",
-        ],
-      },
+      "Intelligence émotionnelle",
+      "Gestion du stress",
+      "Régulation émotionnelle",
+      "Thérapie émotionnelle",
+      "Impact des émotions sur la santé",
+      "Développement émotionnel",
     ],
   },
   {
     icon: <Users size={40} />,
     title: "Psychologie Sociale",
-    content: "Étude des interactions sociales et des comportements de groupe.",
+    content: "Étude des interactions sociales et des comportements de groupe",
     details: [
-      {
-        sectionTitle: "Interaction Sociale",
-        sectionContent: [
-          "Dynamique de groupe",
-          "Leadership et pouvoir",
-          "Préjugés et discrimination",
-        ],
-      },
-      {
-        sectionTitle: "Communication",
-        sectionContent: ["Langage non-verbal", "Techniques d'influence"],
-      },
+      "Dynamiques de groupe",
+      "Influence sociale",
+      "Communication interpersonnelle",
+      "Préjugés et discrimination",
+      "Leadership et pouvoir",
+      "Comportement collectif",
+    ],
+  },
+  {
+    icon: <Scale size={40} />,
+    title: "Psychologie Clinique",
+    content: "Approches thérapeutiques et traitement",
+    details: [
+      "Thérapies comportementales",
+      "Approches psychodynamiques",
+      "Interventions cliniques",
+      "Diagnostic et évaluation",
+      "Traitement des troubles mentaux",
+      "Prévention et intervention précoce",
+    ],
+  },
+  {
+    icon: <Microscope size={40} />,
+    title: "Recherches Expérimentales",
+    content: "Études et expériences menées dans le domaine",
+    details: [
+      "Méthodologie de recherche",
+      "Résultats d'études",
+      "Applications pratiques",
+      "Neurosciences cognitives",
+      "Études longitudinales",
+      "Innovations en psychologie",
     ],
   },
 ];
