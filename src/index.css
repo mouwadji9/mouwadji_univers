@@ -1,7 +1,7 @@
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
   height: 100vh;
 }
@@ -17,7 +17,7 @@ body {
 
 .hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&q=80');
+    url("https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&q=80");
   background-size: cover;
   background-position: center;
   color: white;
@@ -27,7 +27,6 @@ body {
 .content-section {
   padding: 40px 0;
   height: calc(100vh - 56px); /* Subtract navbar height */
-  overflow-y: auto;
 }
 
 .quote-card {

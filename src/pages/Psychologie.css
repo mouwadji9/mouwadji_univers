@@ -1,0 +1,62 @@
+/* psychologie.css */
+
+.content-section {
+  margin-top: 30px;
+}
+
+.title-sidebar {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.title-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.title-item:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.title-item.active {
+  background-color: #495057;
+  color: white;
+}
+
+.details-panel {
+  padding: 20px;
+  border-left: 1px solid #e9ecef;
+}
+
+.details-panel h2 {
+  font-size: 1.8rem;
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.details-panel p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.details-panel .section h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.details-panel .section ul {
+  padding-left: 20px;
+  list-style-type: circle;
+}
+
+.details-panel .section ul li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
