@@ -1,16 +1,10 @@
-import React from "react";
-import { Container, Row, Col, Card, Accordion } from "react-bootstrap";
-import {
-  Brain,
-  Heart,
-  Users,
-  Lightbulb,
-  BookOpen,
-  Scale,
-  Microscope,
-} from "lucide-react";
+import React, { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { Brain, Heart, Users, Scale, Microscope } from "lucide-react";
 
 function Psychologie() {
+  const [activeIndex, setActiveIndex] = useState(null); // État pour suivre l'index actif
+
   const studies = [
     {
       icon: <Brain size={40} />,
@@ -87,46 +81,65 @@ function Psychologie() {
         Exploration approfondie de mes études et recherches en psychologie
       </p>
 
-      <div className="scrollable-section">
-        <Accordion className="mb-5">
-          {studies.map((study, index) => (
-            <Accordion.Item eventKey={index.toString()} key={index}>
-              <Accordion.Header>
-                <div className="d-flex align-items-center">
-                  <span className="me-3 text-primary">{study.icon}</span>
-                  <span>{study.title}</span>
-                </div>
-              </Accordion.Header>
-              <Accordion.Body>
-                <p>{study.content}</p>
-                <ul className="list-unstyled">
-                  {study.details.map((detail, idx) => (
-                    <li key={idx} className="mb-2">
-                      <BookOpen size={16} className="me-2" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </Accordion.Body>
-            </Accordion.Item>
-          ))}
-        </Accordion>
+      <Row>
+        {/* Section des titres à gauche */}
+        <Col md={3} className="border-end">
+          <div style={{ maxHeight: "80vh", overflowY: "auto" }}>
+            <ul className="list-unstyled">
+              {studies.map((study, index) => (
+                <li
+                  key={index}
+                  className={`p-2 mb-2 cursor-pointer ${
+                    activeIndex === index ? "bg-primary text-white" : ""
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <div className="d-flex align-items-center">
+                    <span className="me-3 text-primary">{study.icon}</span>
+                    <span>{study.title}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Col>
 
-        <Row className="mt-5">
-          <Col md={8} className="mx-auto text-center">
-            <h2 className="mb-4">Ma Vision de la Psychologie</h2>
-            <p className="lead">
-              La psychologie est bien plus qu'une science, c'est une exploration
-              continue de l'esprit humain et de ses mystères. À travers mes
-              études et recherches, je cherche à comprendre et à partager ces
-              connaissances précieuses.
-            </p>
-            <footer className="blockquote-footer mt-3">
-              <cite title="Source">mouwadji</cite>
-            </footer>
-          </Col>
-        </Row>
-      </div>
+        {/* Section du contenu à droite */}
+        <Col md={9}>
+          {activeIndex !== null && (
+            <div style={{ maxHeight: "80vh", overflowY: "auto" }}>
+              <h3>{studies[activeIndex].title}</h3>
+              <p>{studies[activeIndex].content}</p>
+              <ul className="list-unstyled">
+                {studies[activeIndex].details.map((detail, idx) => (
+                  <li key={idx} className="mb-2">
+                    <span className="me-2">
+                      <i className="bi bi-book"></i>
+                    </span>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </Col>
+      </Row>
+
+      {/* Section Vision */}
+      <Row className="mt-5">
+        <Col md={8} className="mx-auto text-center">
+          <h2 className="mb-4">Ma Vision de la Psychologie</h2>
+          <p className="lead">
+            La psychologie est bien plus qu'une science, c'est une exploration
+            continue de l'esprit humain et de ses mystères. À travers mes études
+            et recherches, je cherche à comprendre et à partager ces
+            connaissances précieuses.
+          </p>
+          <footer className="blockquote-footer mt-3">
+            <cite title="Source">mouwadji</cite>
+          </footer>
+        </Col>
+      </Row>
     </Container>
   );
 }
